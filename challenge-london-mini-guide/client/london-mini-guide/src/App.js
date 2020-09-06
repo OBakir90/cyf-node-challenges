@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', minHeight: '100vh' }}>
+    <div className="App" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', minHeight: '100vh', margin: '3% 10%' }}>
       <h1>London Mini Guide</h1>
       <Cities handleCityChange={handleCityChange} />
       {!city && category && <Error />}

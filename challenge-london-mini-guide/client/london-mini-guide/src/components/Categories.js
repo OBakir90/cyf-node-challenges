@@ -12,7 +12,7 @@ const Categories = ({ handleCategory, category }) => {
             <h2>Categories</h2>
             <div>
                 {categories.map((ctegory, i) => (
-                    <button type="button" key={i} value={ctegory.name} onClick={handleClick} style={{ backgroundColor: ctegory.name === category ? '#75B4C8' : '#D0D3D4' }}>{ctegory.name}</button>
+                    <button type="button" key={i} value={ctegory.name.toLowerCase()} onClick={handleClick} style={{ backgroundColor: ctegory.name === category ? '#75B4C8' : '#D0D3D4' }}>{ctegory.name}</button>
                 ))}
             </div>
         </div>
