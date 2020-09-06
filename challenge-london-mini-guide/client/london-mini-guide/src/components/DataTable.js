@@ -2,16 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 
 const DataTable = ({ category, city }) => {
-    // const [selectedCategory, setselectedCategory] = useState(null)
-    // const [selectedCity, setSelectedCity] = useState(null)
     const [data, setData] = useState(null)
-
-    // useEffect(() => {
-    //     setselectedCategory(category.toLowerCase())
-    //     setSelectedCity(city)
-    // }, [category, city])
-
+    console.log("1", city, category)
     useEffect(() => {
+        console.log("2", city, category, `https://halit-london-guide.herokuapp.com/${city}/${category}`)
+
         fetch(`https://halit-london-guide.herokuapp.com/${city}/${category}`)
             .then(data => data.json())
             .then(data => setData(data))
@@ -19,7 +14,7 @@ const DataTable = ({ category, city }) => {
 
     return (
         <div style={{ width: '80%' }}>
-            {data && console.log(data)}
+            {data && console.log("table", data)}
             <h3>Here you are</h3>
             <table style={{ width: '70%' }}>
                 <thead>

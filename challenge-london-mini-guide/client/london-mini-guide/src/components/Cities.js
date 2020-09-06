@@ -4,7 +4,7 @@ import cities from '../api/cities.json'
 const Cities = ({ handleCityChange }) => {
 
     const handleChange = (e) => {
-        handleCityChange(e.target.value)
+        handleCityChange(e.target.value.toLowerCase())
     }
 
     return (
